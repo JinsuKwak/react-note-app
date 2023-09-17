@@ -3,7 +3,7 @@ import { Tag } from "styled-components/dist/sheet/types";
 export interface Note {
   title: string;
   content: string;
-  tags: Tag;
+  tags: Tag[];
   color: string;
   priority: string;
   isPinned: boolean;

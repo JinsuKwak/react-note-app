@@ -3,10 +3,22 @@ import { Navbar, Sidebar } from "./layout";
 import { AllNotes, ArchiveNotes, ErrorPage, TagNotes } from "./pages";
 import TrashNote from "./pages/TrashNotes/TrashNotes";
 import "./App.css";
+import { TagsModal } from "./components";
+import { useAppSelector } from "./hooks/redux";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const { veiwEditTagsModal } = useAppSelector((state) => state.modal);
   return (
     <div className="App">
+      {veiwEditTagsModal && <TagsModal type="edit" />}
+      <ToastContainer
+        position="bottom-right"
+        theme="light"
+        pauseOnHover
+        autoClose={1500}
+      />
       <BrowserRouter>
         <Sidebar />
         <div className="app__container">
