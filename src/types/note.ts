@@ -1,4 +1,4 @@
-import { Tag } from "styled-components/dist/sheet/types";
+import { Tag } from "./tag";
 
 export interface Note {
   title: string;

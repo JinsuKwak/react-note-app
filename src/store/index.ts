@@ -8,7 +8,7 @@ export const store = configureStore({
   reducer: {
     menu: menuReducer,
     modal: modalReducer,
-    notesListReducer: notesListReducer,
+    notesList: notesListReducer,
     tags: tagsReducer,
   },
 });

@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const { veiwEditTagsModal } = useAppSelector((state) => state.modal);
   return (
-    <div className="App">
+    <div className="app">
       {veiwEditTagsModal && <TagsModal type="edit" />}
       <ToastContainer
         position="bottom-right"
