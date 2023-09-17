@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Sidebar />
-        <div className="app_container">
+        <div className="app__container">
           <Routes>
             <Route path="/" element={<AllNotes />} />
             <Route path="/archive" element={<ArchiveNotes />} />
