@@ -102,7 +102,9 @@ const CreateNoteModal = () => {
           <DeleteBox
             className="createNote__close-btn"
             onClick={closeCreateNoteModal}
-          ></DeleteBox>
+          >
+            X
+          </DeleteBox>
         </TopBox>
 
         <StyledInput
