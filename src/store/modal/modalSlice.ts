@@ -27,6 +27,7 @@ const modalSlice = createSlice({
       }
     },
     toggleCreateNoteModal: (state, action) => {
+      console.log("Create Note");
       state.veiwCreateNoteModal = action.payload;
     },
     toggleFiltersModal: (state, action) => {
