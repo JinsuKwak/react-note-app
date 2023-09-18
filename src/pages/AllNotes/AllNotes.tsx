@@ -9,7 +9,7 @@ import getAllNotes from "../../utils/getAllNotes";
 const AllNotes = () => {
   const dispatch = useAppDispatch();
   const { mainNotes } = useAppSelector((state) => state.notesList);
-  //const { viewFiltersModal } = useAppSelector((state) => state.modal);
+  const { veiwFiltersModal } = useAppSelector((state) => state.modal);
   const [filter, setFilter] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
@@ -23,13 +23,13 @@ const AllNotes = () => {
 
   return (
     <Container>
-      {/* {viewFiltersModal && (
+      {veiwFiltersModal && (
         <FiltersModal
           handleFilter={filterHandler}
           handleClear={clearHandler}
           filter={filter}
         />
-      )} */}
+      )}
 
       {mainNotes.length === 0 ? (
         <EmptyMsgBox>No Notes...</EmptyMsgBox>

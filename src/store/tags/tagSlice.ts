@@ -4,9 +4,9 @@ import { v4 } from "uuid";
 
 const initialState = {
   tagsList: [
-    { tagName: "Coding", id: v4() },
-    { tagName: "Exercise", id: v4() },
-    { tagName: "Quotes", id: v4() },
+    { tagName: "coding", id: v4() },
+    { tagName: "exercise", id: v4() },
+    { tagName: "quotes", id: v4() },
   ],
 };
 
