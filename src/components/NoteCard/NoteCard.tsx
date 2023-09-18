@@ -10,8 +10,8 @@ import {
 import { BsFillPinFill } from "react-icons/bs";
 import { Note } from "../../types/note";
 import { useAppDispatch } from "../../hooks/redux";
-// import getRelevantBtns from "../../utils/getRelevantBtns";
-// import { readNote, setPinnedNotes } from "../../store/notesList/notesListSlice";
+import getRelevantBtns from "../../utils/getRelevantBtns";
+import { readNote, setPinnedNotes } from "../../store/notesList/notesListSlice";
 import parse from "html-react-parser";
 import ReadNoteModal from "../Modal/ReadNoteModal/ReadNoteModal";
 
@@ -69,7 +69,7 @@ const NoteCard = ({ note, type }: NoteCardProps) => {
 
         <FooterBox>
           <div className="noteCard__date">{date}</div>
-          {/* <div>{getRelevantBtns(type, note, dispatch)}</div> */}
+          <div>{getRelevantBtns(type, note, dispatch)}</div>
         </FooterBox>
       </Card>
     </>

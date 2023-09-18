@@ -3,15 +3,19 @@ import { Navbar, Sidebar } from "./layout";
 import { AllNotes, ArchiveNotes, ErrorPage, TagNotes } from "./pages";
 import TrashNote from "./pages/TrashNotes/TrashNotes";
 import "./App.css";
-import { TagsModal } from "./components";
+import { CreateNoteModal, TagsModal } from "./components";
 import { useAppSelector } from "./hooks/redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const { veiwEditTagsModal } = useAppSelector((state) => state.modal);
+  const { veiwEditTagsModal, veiwCreateNoteModal } = useAppSelector(
+    (state) => state.modal
+  );
+
   return (
     <div className="app">
+      {veiwCreateNoteModal && <CreateNoteModal />}
       {veiwEditTagsModal && <TagsModal type="edit" />}
       <ToastContainer
         position="bottom-right"
